@@ -9,7 +9,7 @@ from cryptography.hazmat.backends import default_backend
 from base64 import urlsafe_b64encode, urlsafe_b64decode
 import secrets
 
-FAILED_ATTEMPTS_LIMIT = 1
+FAILED_ATTEMPTS_LIMIT = 5
 failed_attempts = {}
 
 def generate_key(password: str, salt: bytes) -> bytes:
